@@ -8,7 +8,21 @@
         <title>Aprendiendo JS</title>
     </head>
     <body>
+        <!-- SALDO -->
+        <p id="pSaldo">Saldo = <input type="number" value="0" id="saldoTotal" disabled></p> 
+        <!-- INGRESO -->
+        <input type="number" name="" id="ingresoAdicional"> <br>
+        <button id="ingresar" onclick="guardarDinero();">INGRESO</button><br><br>
+        <!-- DETALLE DEL GASTO -->
+        <textarea name="" id="concepto" cols="50" rows="5"></textarea><br>
+        <!-- FECHA DEL GASTO -->
+        <input type="date" id="fechaActual" value="" >
+        <!-- HORA DEL GASTO -->
+        <input type="time" id="horaActual" name="hora"><br>
+        <!-- GINERO GASTADO -->
+        <input type="number" id="dineroGastado"><br>
+        <button id="gasto" onclick="guardarGasto()">GASTO</button>
+
         
-    
     </body>
     </html>

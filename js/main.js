@@ -93,3 +93,76 @@
 
 // }
 
+ 
+// ENTREGABLE 4
+
+// let ingresoMensual = parseInt(prompt("INGRESE SU ESTIMADO MENSUAL"));
+
+
+
+function guardarDinero(){
+    
+    let ingresarDinero = parseFloat(document.getElementById('ingresoAdicional').value);
+    let saldoAcumulado = parseFloat(document.getElementById('saldoTotal').value);
+    
+    //verifico que el campo no este vacio
+    if (ingresarDinero == 0 || ingresarDinero == '') { 
+        alert ('El campo no puede estar vacio ni en 0');
+    }else{
+    //sumo dinero ingresado a saldo
+    document.getElementById('saldoTotal').value = ingresarDinero + saldoAcumulado;
+    document.getElementById('ingresoAdicional').value = 0;
+    }
+
+   
+}
+
+function guardarGasto(){
+    
+    const sacarDinero = parseFloat(document.getElementById('dineroGastado').value); //dato dinero a restar
+    const saldoAcumulado = parseFloat(document.getElementById('saldoTotal').value); //datos saldo
+    //verifico que el campo no este vacio
+    if (sacarDinero == 0 || sacarDinero == '') {
+        alert ('El campo no puede estar vacio ni en 0');
+    }else{
+        //resto dinero ingresado a saldo
+        document.getElementById('saldoTotal').value = saldoAcumulado - sacarDinero;
+        document.getElementById('dineroGastado').value = 0;
+    }
+    }
+    
+    window.onload = function(){
+        var fecha = new Date(); //Fecha actual
+        var mes = fecha.getMonth()+1; //obteniendo mes
+        var dia = fecha.getDate(); //obteniendo dia
+        var ano = fecha.getFullYear(); //obteniendo año
+        var horaHoy = new Date(); //Hora Actual
+        var hora = horaHoy.getHours(); //obtener hora
+        var minutos = horaHoy.getMinutes(); //obteniendo minutos
+
+        if(dia<10)
+          dia='0'+dia; //agrega cero si la hora menor de 10
+        if(mes<10)
+          mes='0'+mes //agrega cero si los minutos menor de 10
+        document.getElementById('fechaActual').value=ano+"-"+mes+"-"+dia;
+
+        
+        if(hora<10)
+          hora='0'+hora; //agrega cero si el menor de 10
+        if(minutos<10)
+          minutos='0'+minutos //agrega cero si el menor de 10
+        document.getElementById('horaActual').value=hora+":"+minutos;
+      }
+    
+    
+
+
+
+// const ingresoExtraordinario = (ingreo, saldo) => {
+//     return ingreso + saldo;
+// }
+
+// const gastoSalida = (saldo, egreso) => {
+//     return saldo - egreso;
+// }
+
