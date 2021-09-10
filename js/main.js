@@ -55,41 +55,41 @@
 // ENTREGABLE 3 CICLOS
 
 
-let tabla = parseInt(prompt('ingrese un numero'));
+// let tabla = parseInt(prompt('ingrese un numero'));
 
 
 
-for (let index = 0; index <= 5; index++) {
-   let resultado = tabla * index;
-    console.log(tabla + 'x'  + index + ' es igual a: ' + resultado);
+// for (let index = 0; index <= 5; index++) {
+//    let resultado = tabla * index;
+//     console.log(tabla + 'x'  + index + ' es igual a: ' + resultado);
     
-    if(resultado != 0){
-        if(resultado % 2 == 0) {
-            console.log(resultado + ' es un numero par');
-        }
-        else {
-            console.log(resultado + ' es un numero impar');
-        }
-    }
-}
+//     if(resultado != 0){
+//         if(resultado % 2 == 0) {
+//             console.log(resultado + ' es un numero par');
+//         }
+//         else {
+//             console.log(resultado + ' es un numero impar');
+//         }
+//     }
+// }
 
 
-let contraseña = prompt('ingrese su contraseña');
-let intentos = 3;
+// let contraseña = prompt('ingrese su contraseña');
+// let intentos = 3;
 
 
-while(contraseña != 'ESC'){
+// while(contraseña !== 'ESC'){
     
-    if (intentos >=1) {
-        console.log('Contraseña incorrecta, le quedan: ' + intentos + ' intentos');
+//     if (intentos >=1) {
+//         console.log('Contraseña incorrecta, le quedan: ' + intentos + ' intentos');
 
-    }else{
-        console.log('ya no le quedan mas intentos');
-        break;
-    }
+//     }else{
+//         console.log('ya no le quedan mas intentos');
+//         break;
+//     }
     
-    contraseña = prompt('ingrese una nueva contraseña')
-    intentos = intentos -1;
+//     contraseña = prompt('ingrese una nueva contraseña')
+//     intentos = intentos -1;
 
-}
+// }
 
